@@ -1,6 +1,8 @@
-package com.a3xh1.jetpackex.di
+package com.a3xh1.jetpackex.di.component
 
 import com.a3xh1.jetpackex.base.App
+import com.a3xh1.jetpackex.di.modules.ActivityModules
+import com.a3xh1.jetpackex.di.modules.FragmentModules
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.support.AndroidSupportInjectionModule

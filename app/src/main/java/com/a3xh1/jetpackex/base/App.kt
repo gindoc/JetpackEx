@@ -2,7 +2,7 @@ package com.a3xh1.jetpackex.base
 
 import android.app.Activity
 import androidx.multidex.MultiDexApplication
-import com.a3xh1.jetpackex.di.DaggerAppComponent
+import com.a3xh1.jetpackex.di.component.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.HasActivityInjector
 import dagger.android.DispatchingAndroidInjector

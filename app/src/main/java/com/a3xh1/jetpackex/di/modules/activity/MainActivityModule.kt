@@ -1,4 +1,4 @@
-package com.a3xh1.jetpackex.di.modules
+package com.a3xh1.jetpackex.di.modules.activity
 
 import com.a3xh1.jetpackex.MainActivity
 import com.a3xh1.jetpackex.view.main.HomeFragment

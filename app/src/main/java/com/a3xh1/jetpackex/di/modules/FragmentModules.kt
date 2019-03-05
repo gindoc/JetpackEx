@@ -1,6 +1,6 @@
-package com.a3xh1.jetpackex.di
+package com.a3xh1.jetpackex.di.modules
 
-import com.a3xh1.jetpackex.di.modules.HomeFragmentModule
+import com.a3xh1.jetpackex.di.modules.fragment.HomeFragmentModule
 import com.a3xh1.jetpackex.di.scope.PerFragment
 import com.a3xh1.jetpackex.view.main.ChildFragment
 import com.a3xh1.jetpackex.view.main.HomeFragment

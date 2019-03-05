@@ -1,6 +1,6 @@
-package com.a3xh1.jetpackex.di
+package com.a3xh1.jetpackex.di.component
 
-import com.a3xh1.jetpackex.base.view.activity.InjectionActivity
+import com.a3xh1.jetpackex.base.view.fragment.InjectFragment
 import dagger.Subcomponent
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
@@ -14,8 +14,8 @@ import dagger.android.AndroidInjector
         AndroidInjectionModule::class
     ]
 )
-interface InjectActivityComponent : AndroidInjector<InjectionActivity> {
+interface InjectFragmentComponent: AndroidInjector<InjectFragment>{
 
     @Subcomponent.Builder
-    abstract class Builder : AndroidInjector.Builder<InjectionActivity>()
+    abstract class Builder : AndroidInjector.Builder<InjectFragment>()
 }

@@ -1,7 +1,7 @@
-package com.a3xh1.jetpackex.di
+package com.a3xh1.jetpackex.di.modules
 
 import com.a3xh1.jetpackex.MainActivity
-import com.a3xh1.jetpackex.di.modules.MainActivityModule
+import com.a3xh1.jetpackex.di.modules.activity.MainActivityModule
 import com.a3xh1.jetpackex.di.scope.PerActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

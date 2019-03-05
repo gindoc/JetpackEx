@@ -1,4 +1,4 @@
-package com.a3xh1.jetpackex.di.modules
+package com.a3xh1.jetpackex.di.modules.fragment
 
 import com.a3xh1.jetpackex.view.main.ChildFragment
 import dagger.Module
