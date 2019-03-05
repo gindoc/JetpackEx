@@ -1,8 +1,8 @@
 package com.a3xh1.jetpackex.di.modules
 
-import com.a3xh1.jetpackex.view.main.HomeFragment
 import dagger.Module
 import dagger.Provides
+import javax.inject.Named
 
 /**
  * Author: GIndoc on 2019/3/5.
@@ -11,8 +11,14 @@ import dagger.Provides
 @Module
 class HomeFragmentModule{
 
+    @Named("homeString")
     @Provides
     fun provideName(): String {
-        return HomeFragment::class.java.name
+        return "HomeFragment"
+    }
+
+    @Provides
+    fun provideNum():Int{
+        return 1000
     }
 }

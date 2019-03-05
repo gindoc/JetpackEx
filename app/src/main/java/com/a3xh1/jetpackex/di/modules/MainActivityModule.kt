@@ -26,4 +26,9 @@ class MainActivityModule {
         return HomeFragment::class.java.name
     }
 
+    @Provides
+    fun provideHomeFragment():HomeFragment{
+        return HomeFragment()
+    }
+
 }

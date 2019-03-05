@@ -10,7 +10,7 @@ import dagger.android.ContributesAndroidInjector
  * Author: GIndoc on 2019/3/5.
  * FOR   :
  */
-@Module(subcomponents = [InjectFragmentComponent::class])
+@Module//(subcomponents = [InjectFragmentComponent::class])
 abstract class FragmentModules{
 
     @PerFragment
