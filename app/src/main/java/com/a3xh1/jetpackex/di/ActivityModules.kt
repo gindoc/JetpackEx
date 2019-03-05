@@ -13,7 +13,7 @@ import dagger.android.ContributesAndroidInjector
  * Author: GIndoc on 2019/3/4.
  * FOR   :
  */
-@Module//(subcomponents = [InjectActivityComponent::class])
+@Module
 abstract class ActivityModules {
 
 
