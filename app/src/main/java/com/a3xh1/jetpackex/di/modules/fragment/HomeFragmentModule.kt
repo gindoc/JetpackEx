@@ -23,8 +23,4 @@ class HomeFragmentModule{
         return 1000
     }
 
-//    @Provides
-//    fun provideChildFragment():ChildFragment{
-//        return ChildFragment()
-//    }
 }

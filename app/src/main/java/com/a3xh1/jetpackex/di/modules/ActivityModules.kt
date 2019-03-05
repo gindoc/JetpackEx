@@ -11,7 +11,7 @@ import dagger.android.ContributesAndroidInjector
  * Author: GIndoc on 2019/3/4.
  * FOR   :
  */
-@Module//(subcomponents = [InjectActivityComponent::class])
+@Module
 abstract class ActivityModules {
 
 
@@ -19,9 +19,5 @@ abstract class ActivityModules {
     @ContributesAndroidInjector(modules = [MainActivityModule::class])
     abstract fun provideMainActivityInjector(): MainActivity
 
-    // 最好不要把fragment的module和activity的module放在一起，虽然也能实现
-//    @PerFragment
-//    @ContributesAndroidInjector(modules = [MainActivityModule::class])
-//    abstract fun provideHomeFragmentInjector(): HomeFragment
 
 }

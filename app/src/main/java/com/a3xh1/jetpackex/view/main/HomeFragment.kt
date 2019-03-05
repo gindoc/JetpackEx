@@ -11,11 +11,12 @@ import com.a3xh1.jetpackex.R
  * Author: GIndoc on 2019/3/4.
  * FOR   :
  */
-class HomeFragment /*@Inject constructor()*/: BaseFragment<FragmentHomeBinding>() {
+class HomeFragment: BaseFragment<FragmentHomeBinding>() {
 
     override val layoutId: Int = R.layout.fragment_home
 
-    // 如果需要注入其他数据，则应该在MainActivityModule中provideHomeFragment，否则用@inject constructor的方式编译通不过
+    // 如果需要注入其他数据，则应该在MainActivityModule中提供provideHomeFragment()方法，
+    // 否则用@Inject constructor的方式编译通不过，会提示找不到要Inject的数据
     @field:Named("homeString")
     @Inject
     lateinit var className:String

@@ -11,7 +11,7 @@ import dagger.android.ContributesAndroidInjector
  * Author: GIndoc on 2019/3/5.
  * FOR   :
  */
-@Module//(subcomponents = [InjectFragmentComponent::class])
+@Module
 abstract class FragmentModules{
 
     @PerFragment
@@ -20,6 +20,6 @@ abstract class FragmentModules{
 
 
     @PerFragment
-    @ContributesAndroidInjector//(modules = [HomeFragmentModule::class])
+    @ContributesAndroidInjector
     abstract fun provideChildFragmentInjector(): ChildFragment
 }
