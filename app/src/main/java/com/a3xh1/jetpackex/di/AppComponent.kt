@@ -13,8 +13,10 @@ import dagger.android.support.AndroidSupportInjectionModule
     modules = [
         AndroidInjectionModule::class,
         AndroidSupportInjectionModule::class,
-        ActivityModules::class,
-        FragmentModules::class]
+        ActivityModules::class
+//        ,
+//        FragmentModules::class
+    ]
 )
 interface AppComponent {
 
