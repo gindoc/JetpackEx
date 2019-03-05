@@ -2,6 +2,7 @@ package com.a3xh1.jetpackex.di
 
 import com.a3xh1.jetpackex.di.modules.HomeFragmentModule
 import com.a3xh1.jetpackex.di.scope.PerFragment
+import com.a3xh1.jetpackex.view.main.ChildFragment
 import com.a3xh1.jetpackex.view.main.HomeFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -16,4 +17,9 @@ abstract class FragmentModules{
     @PerFragment
     @ContributesAndroidInjector(modules = [HomeFragmentModule::class])
     abstract fun provideHomeFragmentInjector(): HomeFragment
+
+
+    @PerFragment
+    @ContributesAndroidInjector//(modules = [HomeFragmentModule::class])
+    abstract fun provideChildFragmentInjector(): ChildFragment
 }

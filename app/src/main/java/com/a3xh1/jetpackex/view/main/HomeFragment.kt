@@ -4,8 +4,8 @@ import android.widget.Toast
 import com.a3xh1.jetpackex.base.view.fragment.BaseFragment
 import com.a3xh1.jetpackex.databinding.FragmentHomeBinding
 import javax.inject.Inject
-import com.a3xh1.jetpackex.R
 import javax.inject.Named
+import com.a3xh1.jetpackex.R
 
 /**
  * Author: GIndoc on 2019/3/4.
@@ -24,10 +24,16 @@ class HomeFragment /*@Inject constructor()*/: BaseFragment<FragmentHomeBinding>(
     @JvmField
     var num:Int=0
 
+    @Inject
+    lateinit var childFragment: ChildFragment
+
 
     override fun initView() {
         super.initView()
         Toast.makeText(context, "$className  $num", Toast.LENGTH_SHORT).show()
+        val beginTransaction = childFragmentManager.beginTransaction()
+        beginTransaction.add(R.id.fl_container, childFragment)
+        beginTransaction.commit()
     }
 
 

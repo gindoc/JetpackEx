@@ -1,5 +1,6 @@
 package com.a3xh1.jetpackex.di.modules
 
+import com.a3xh1.jetpackex.view.main.ChildFragment
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
@@ -21,4 +22,9 @@ class HomeFragmentModule{
     fun provideNum():Int{
         return 1000
     }
+
+//    @Provides
+//    fun provideChildFragment():ChildFragment{
+//        return ChildFragment()
+//    }
 }
