@@ -53,6 +53,9 @@ dependencies {
     // constraintLayout
     api libs.constraint
 
+    api libs.arch_comp_navigation
+    api libs.arch_comp_navigation_ui
+
     // AutoDispose
     api libs.autodispose_archs_ktx
 
