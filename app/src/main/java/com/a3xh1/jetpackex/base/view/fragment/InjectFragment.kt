@@ -2,6 +2,9 @@ package com.a3xh1.jetpackex.base.view.fragment
 
 import android.content.Context
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.a3xh1.base.view.AutoDisposeFragment
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -14,7 +17,10 @@ import javax.inject.Inject
  * FOR   :
  */
 
-abstract class InjectFragment: AutoDisposeFragment(), HasSupportFragmentInjector {
+abstract class InjectFragment : AutoDisposeFragment(), HasSupportFragmentInjector {
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     @Inject
     lateinit var childFragmentInjector: DispatchingAndroidInjector<Fragment>
@@ -25,8 +31,8 @@ abstract class InjectFragment: AutoDisposeFragment(), HasSupportFragmentInjector
 
     override fun onAttach(context: Context?) {
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            // Perform injection here for M (API 23) due to deprecation of onAttach(Activity).
-            AndroidSupportInjection.inject(this)
+        // Perform injection here for M (API 23) due to deprecation of onAttach(Activity).
+        AndroidSupportInjection.inject(this)
 //        }
         super.onAttach(context)
     }
@@ -39,5 +45,7 @@ abstract class InjectFragment: AutoDisposeFragment(), HasSupportFragmentInjector
 //        }
 //        super.onAttach(activity)
 //    }
+
+    fun <T : ViewModel> getInjectViewModel(c: Class<T>) = ViewModelProviders.of(this, viewModelFactory).get(c)
 
 }

@@ -34,4 +34,6 @@ abstract class FragmentModules {
     @PerFragment
     @ContributesAndroidInjector
     abstract fun provideRegisterFragmentInjector(): RegisterFragment
+
+
 }
