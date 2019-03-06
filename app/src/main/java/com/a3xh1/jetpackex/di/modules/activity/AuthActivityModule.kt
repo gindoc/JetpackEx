@@ -13,6 +13,6 @@ import dagger.Module
 abstract class AuthActivityModule {
 
 //    @Binds
-//    abstract fun bindLoginViewModel(loginViewModel: LoginViewModel): ViewModel
+//    abstract fun bindLoginViewModel(loginViewModel: LoginViewModelModule): ViewModel
 
 }
