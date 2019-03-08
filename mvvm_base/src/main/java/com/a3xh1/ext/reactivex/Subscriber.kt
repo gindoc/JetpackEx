@@ -7,6 +7,10 @@ import com.uber.autodispose.FlowableSubscribeProxy
  * FOR   :
  */
 
-fun <T> FlowableSubscribeProxy<T>.subscribes(onNext: (T) -> Unit) {
-    subscribe(onNext, {})
+fun <T> FlowableSubscribeProxy<T>.subscribes(onNext: (T) -> Unit, onError:(Throwable)->Unit={}) {
+    subscribe(onNext, onError)
+}
+
+fun <T> FlowableSubscribeProxy<T>.subscribes(onNext: (T) -> Unit){
+    subscribes(onNext, {})
 }

@@ -22,14 +22,6 @@ fun <T> handleResponse(): GlobalErrorTransformer<Response<T>> = GlobalErrorTrans
             Observable.error(ResultException(it.code, it.msg))
         } else {
             Observable.just(it)
-//            Observable.create { emitter ->
-//                try {
-//                    emitter.onNext(it)
-//                    emitter.onComplete()
-//                } catch (e: Exception) {
-//                    emitter.onError(e)
-//                }
-//            };
         }
     },
 
