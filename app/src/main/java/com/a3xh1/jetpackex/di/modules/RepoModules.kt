@@ -1,9 +1,7 @@
-package com.a3xh1.jetpackex.di.modules.repo
+package com.a3xh1.jetpackex.di.modules
 
-import com.a3xh1.jetpackex.view.auth.login.*
+import com.a3xh1.jetpackex.di.modules.repo.LoginRepoModule
 import dagger.Module
-import dagger.Provides
-import dagger.android.ContributesAndroidInjector
 
 /**
  * Author: GIndoc on 2019/3/6.

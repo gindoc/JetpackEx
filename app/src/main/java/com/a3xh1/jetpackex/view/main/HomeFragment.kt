@@ -21,6 +21,10 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
     @Inject
     lateinit var className:String
 
+    @field:Named("homeString")
+    @Inject
+    lateinit var className2:String
+
     @Inject
     @JvmField
     var num:Int=0
@@ -28,6 +32,8 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
     @Inject
     lateinit var childFragment: ChildFragment
 
+    @Inject
+    lateinit var childFragment2: ChildFragment
 
     override fun initView() {
         super.initView()

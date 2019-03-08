@@ -3,6 +3,11 @@ package com.a3xh1.jetpackex.view.auth.login
 import com.a3xh1.base.repository.BaseRepositoryBoth
 import com.a3xh1.base.repository.ILocalDataSource
 import com.a3xh1.base.repository.IRemoteDataSource
+import com.a3xh1.jetpackex.data.remote.LoginService
+import com.a3xh1.jetpackex.pojo.User
+import com.a3xh1.pojo.Response
+import io.reactivex.Flowable
+import io.reactivex.Observable
 import javax.inject.Inject
 
 /**
@@ -33,7 +38,7 @@ import javax.inject.Inject
 //class LoginLocalDataSource @Inject constructor(): ILoginLocalDataSource
 
 interface ILoginRemoteDataSource : IRemoteDataSource {
-    fun login(): String
+    fun login(phone: String, password: String): Flowable<Response<User>>
 }
 
 interface ILoginLocalDataSource : ILocalDataSource
@@ -43,13 +48,13 @@ class LoginDataResourceRepository constructor(
     localDataSource: ILoginLocalDataSource
 ) : BaseRepositoryBoth<ILoginRemoteDataSource, ILoginLocalDataSource>(remoteDataSource, localDataSource) {
 
-    fun login() = remoteDataSource.login()
+    fun login(phone: String, password: String) = remoteDataSource.login(phone, password)
 }
 
-class LoginRemoteDataRepository : ILoginRemoteDataSource {
+class LoginRemoteDataRepository(val loginService: LoginService) : ILoginRemoteDataSource {
 
-    override fun login(): String {
-        return "登录成功"
+    override fun login(phone: String, password: String): Flowable<Response<User>> {
+        return loginService.login(phone, password)
     }
 }
 

@@ -25,6 +25,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     @Inject
     lateinit var homeFragment: HomeFragment
 
+    @Inject
+    lateinit var homeFragment2: HomeFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

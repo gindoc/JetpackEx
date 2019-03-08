@@ -55,9 +55,33 @@ dependencies {
 
     api libs.arch_comp_navigation
     api libs.arch_comp_navigation_ui
+    api libs.arch_comp_extension
+//    api libs.arch_comp_viewmodel
 
     // AutoDispose
+    api libs.autodispose_ktx
     api libs.autodispose_archs_ktx
+//    api libs.autodispose
+//    api libs.autodispose_android_ktx
+
+    // retrofit
+    api libs.retrofit
+    api libs.retrofit_gson
+    api libs.retrofit_rxjava
+
+    // okhttp
+    api libs.okhttp
+    api libs.okhttp_logging
+
+    // rx
+    api libs.rxweaver
+    api libs.rxjava
+    api libs.rxkotlin
+    api libs.rxandroid
+
+
+    // logger
+    api libs.timber
 
     testImplementation libs.junit
     androidTestImplementation libs.espresso_core
