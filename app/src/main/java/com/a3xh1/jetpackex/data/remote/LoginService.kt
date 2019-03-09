@@ -1,9 +1,8 @@
 package com.a3xh1.jetpackex.data.remote
 
 import com.a3xh1.jetpackex.pojo.User
-import com.a3xh1.pojo.Response
+import com.a3xh1.basecore.pojo.Response
 import io.reactivex.Flowable
-import io.reactivex.Observable
 import retrofit2.http.POST
 import retrofit2.http.Query
 

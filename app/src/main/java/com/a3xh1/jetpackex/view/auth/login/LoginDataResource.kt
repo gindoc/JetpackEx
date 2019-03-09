@@ -1,14 +1,12 @@
 package com.a3xh1.jetpackex.view.auth.login
 
-import com.a3xh1.base.repository.BaseRepositoryBoth
-import com.a3xh1.base.repository.ILocalDataSource
-import com.a3xh1.base.repository.IRemoteDataSource
+import com.a3xh1.basecore.base.repository.BaseRepositoryBoth
+import com.a3xh1.basecore.base.repository.ILocalDataSource
+import com.a3xh1.basecore.base.repository.IRemoteDataSource
 import com.a3xh1.jetpackex.data.remote.LoginService
 import com.a3xh1.jetpackex.pojo.User
-import com.a3xh1.pojo.Response
+import com.a3xh1.basecore.pojo.Response
 import io.reactivex.Flowable
-import io.reactivex.Observable
-import javax.inject.Inject
 
 /**
  * Author: GIndoc on 2019/3/6.

@@ -1,6 +1,6 @@
 package com.a3xh1.jetpackex.di.modules
 
-import com.a3xh1.common.gson.GsonDConverterFactory
+import com.a3xh1.basecore.common.gson.GsonDConverterFactory
 import com.a3xh1.jetpackex.BuildConfig
 import dagger.Module
 import dagger.Provides
@@ -48,7 +48,7 @@ class HttpClientModule {
     @Named("httpLogger")
     fun providesHttpLogger(): HttpLoggingInterceptor {
         val interceptor =
-            HttpLoggingInterceptor(HttpLoggingInterceptor.Logger { message -> com.a3xh1.utils.logger.log { message } })
+            HttpLoggingInterceptor(HttpLoggingInterceptor.Logger { message -> com.a3xh1.basecore.utils.logger.log { message } })
         val basic = if (BuildConfig.DEBUG)
             HttpLoggingInterceptor.Level.BODY
         else

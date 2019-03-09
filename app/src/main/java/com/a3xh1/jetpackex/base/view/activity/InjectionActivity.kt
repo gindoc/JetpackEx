@@ -2,7 +2,7 @@ package com.a3xh1.jetpackex.base.view.activity
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.a3xh1.base.view.AutoDisposeActivity
+import com.a3xh1.basecore.base.view.AutoDisposeActivity
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector

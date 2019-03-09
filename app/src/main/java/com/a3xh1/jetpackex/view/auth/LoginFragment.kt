@@ -9,10 +9,6 @@ import com.a3xh1.jetpackex.databinding.FragmentLoginBinding
 import com.a3xh1.jetpackex.R
 import com.a3xh1.jetpackex.common.loadings.CommonLoadingState
 import com.a3xh1.jetpackex.utils.toast
-import com.uber.autodispose.autoDisposable
-import io.reactivex.Observable
-import java.lang.Exception
-import java.util.concurrent.TimeUnit
 
 /**
  * Author: GIndoc on 2019/3/5.

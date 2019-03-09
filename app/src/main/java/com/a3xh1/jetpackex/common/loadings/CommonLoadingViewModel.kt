@@ -1,7 +1,7 @@
 package com.a3xh1.jetpackex.common.loadings
 
 import androidx.lifecycle.MutableLiveData
-import com.a3xh1.base.viewmodel.BaseViewModel
+import com.a3xh1.basecore.base.viewmodel.BaseViewModel
 
 @Suppress("WHEN_ENUM_CAN_BE_NULL_IN_JAVA")
 class CommonLoadingViewModel private constructor() : BaseViewModel(), ILoadingDelegate {
