@@ -7,6 +7,8 @@ import androidx.navigation.Navigation
 import com.a3xh1.jetpackex.base.view.fragment.BaseFragment
 import com.a3xh1.jetpackex.databinding.FragmentLoginBinding
 import com.a3xh1.jetpackex.R
+import com.a3xh1.jetpackex.common.loadings.CommonLoadingState
+import com.a3xh1.jetpackex.utils.toast
 import com.uber.autodispose.autoDisposable
 import io.reactivex.Observable
 import java.lang.Exception
@@ -34,6 +36,17 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
         viewModel.error
             .observe(this, Observer {
                 Toast.makeText(context, it?.message, Toast.LENGTH_SHORT).show()
+            })
+
+        viewModel.loadingState
+            .observe(this, Observer {
+                @Suppress("WHEN_ENUM_CAN_BE_NULL_IN_JAVA")
+                when (it) {
+                    CommonLoadingState.LOADING -> toast { "请求中" }
+                    CommonLoadingState.ERROR -> toast { "请求出错" }
+//                    CommonLoadingState.EMPTY,
+//                    CommonLoadingState.IDLE -> toast { "" }
+                }
             })
 
     }
