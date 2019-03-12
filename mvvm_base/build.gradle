@@ -53,10 +53,15 @@ dependencies {
     // constraintLayout
     api libs.constraint
 
+    // navigation
     api libs.arch_comp_navigation
     api libs.arch_comp_navigation_ui
     api libs.arch_comp_extension
 //    api libs.arch_comp_viewmodel
+
+    // paging
+    api libs.arch_comp_paging
+    api libs.arch_comp_paging_rxjava
 
     // AutoDispose
     api libs.autodispose_ktx
@@ -79,6 +84,7 @@ dependencies {
     api libs.rxkotlin
     api libs.rxandroid
 
+    api libs.glide
 
     // logger
     api libs.timber

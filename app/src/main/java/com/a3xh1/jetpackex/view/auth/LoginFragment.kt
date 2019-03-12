@@ -1,5 +1,6 @@
 package com.a3xh1.jetpackex.view.auth
 
+import android.content.Intent
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -8,7 +9,9 @@ import com.a3xh1.jetpackex.base.view.fragment.BaseFragment
 import com.a3xh1.jetpackex.databinding.FragmentLoginBinding
 import com.a3xh1.jetpackex.R
 import com.a3xh1.jetpackex.common.loadings.CommonLoadingState
+import com.a3xh1.jetpackex.utils.inflateTitle
 import com.a3xh1.jetpackex.utils.toast
+import com.a3xh1.jetpackex.view.list.ListActivity
 
 /**
  * Author: GIndoc on 2019/3/5.
@@ -23,9 +26,11 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     override fun initView() {
         super.initView()
         binding.view = this
+        inflateTitle(binding.title.root, "登录", activity)
 
         viewModel.user
             .observe(this, Observer {
+                startActivity(Intent(context, ListActivity::class.java))
                 Toast.makeText(context, it?.nickname, Toast.LENGTH_SHORT).show()
             })
 

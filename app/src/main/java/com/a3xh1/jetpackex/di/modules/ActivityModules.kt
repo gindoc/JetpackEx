@@ -2,9 +2,11 @@ package com.a3xh1.jetpackex.di.modules
 
 import com.a3xh1.jetpackex.MainActivity
 import com.a3xh1.jetpackex.di.modules.activity.AuthActivityModule
+import com.a3xh1.jetpackex.di.modules.activity.ListActivityModule
 import com.a3xh1.jetpackex.di.modules.activity.MainActivityModule
 import com.a3xh1.jetpackex.di.scope.PerActivity
 import com.a3xh1.jetpackex.view.auth.AuthActivity
+import com.a3xh1.jetpackex.view.list.ListActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -25,5 +27,7 @@ abstract class ActivityModules {
     @ContributesAndroidInjector(modules = [AuthActivityModule::class])
     abstract fun provideAuthActivityInjector(): AuthActivity
 
-
+    @PerActivity
+    @ContributesAndroidInjector(modules = [ListActivityModule::class])
+    abstract fun provideListActivityInjector(): ListActivity
 }

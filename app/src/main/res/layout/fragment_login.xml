@@ -16,9 +16,9 @@
             android:background="@color/white"
             android:orientation="vertical">
 
-        <!--<include-->
-                <!--android:id="@+id/title"-->
-                <!--layout="@layout/layout_common_title" />-->
+        <include
+                android:id="@+id/title"
+                layout="@layout/layout_common_title" />
 
 
         <ScrollView
@@ -28,6 +28,8 @@
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:orientation="vertical">
 
                 <ImageView
@@ -35,7 +37,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="22dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:src="@drawable/ic_logo" />
 
                 <EditText
                         android:id="@+id/et_phone"
@@ -45,6 +47,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="18dp"
                         android:background="@color/transparent"
+                        android:drawableLeft="@drawable/ic_phone"
                         android:drawablePadding="17dp"
                         android:hint="请输入您的手机号"
                         android:inputType="phone"
@@ -72,6 +75,7 @@
                         android:drawablePadding="17dp"
                         android:hint="请输入密码"
                         android:inputType="textPassword"
+                        android:drawableLeft="@drawable/ic_password"
                         android:paddingBottom="15dp"
                         android:paddingEnd="10dp"
                         android:paddingStart="10dp"
@@ -106,7 +110,7 @@
                             android:layout_height="wrap_content"
                             android:scaleType="fitXY"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:src="@mipmap/ic_launcher"
+                            android:src="@drawable/auth_bg"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -119,6 +123,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="35dp"
+                            android:background="@drawable/round50_primary_gradient_bg"
                             android:text="登录"
                             android:onClick="@{()->view.login()}"
                             android:textColor="@color/white"
@@ -181,6 +186,7 @@
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
+                            android:src="@drawable/ic_login_qq"
                             app:layout_constraintHorizontal_bias="0.4"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -189,6 +195,7 @@
                     <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:src="@drawable/ic_login_wx"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.6"

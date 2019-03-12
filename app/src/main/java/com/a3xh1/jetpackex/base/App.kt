@@ -5,6 +5,7 @@ import com.a3xh1.basecore.base.BaseApplication
 import com.a3xh1.jetpackex.BuildConfig
 import com.a3xh1.jetpackex.di.component.DaggerAppComponent
 import com.a3xh1.basecore.utils.logger.initLogger
+import com.squareup.leakcanary.LeakCanary
 import dagger.android.AndroidInjector
 import dagger.android.HasActivityInjector
 import dagger.android.DispatchingAndroidInjector
@@ -28,7 +29,15 @@ class App : BaseApplication(), HasActivityInjector {
 
         initLogger(BuildConfig.DEBUG)
 
+        initLeakCanary()
 
+    }
+
+    private fun initLeakCanary() {
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            return
+        }
+        LeakCanary.install(this)
     }
 
     override fun activityInjector(): AndroidInjector<Activity> {

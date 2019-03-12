@@ -38,9 +38,9 @@ android {
 }
 
 apply plugin: 'kotlin-kapt'
-kapt {
-    generateStubs = true
-}
+//kapt {
+//    generateStubs = true
+//}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -55,6 +55,11 @@ dependencies {
     implementation 'com.google.dagger:dagger-android-support:2.21' // if you use the support libraries
     kapt 'com.google.dagger:dagger-compiler:2.21'
     kapt 'com.google.dagger:dagger-android-processor:2.21'
+
+
+    debugImplementation libs.leak_canary_debug
+    debugImplementation libs.leak_canary_debug_support
+    releaseImplementation libs.leak_canary_release
 
     testImplementation libs.junit
     androidTestImplementation libs.espresso_core

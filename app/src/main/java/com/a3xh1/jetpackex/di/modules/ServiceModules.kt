@@ -1,5 +1,6 @@
 package com.a3xh1.jetpackex.di.modules
 
+import com.a3xh1.jetpackex.data.remote.ListService
 import com.a3xh1.jetpackex.data.remote.LoginService
 import dagger.Module
 import dagger.Provides
@@ -19,4 +20,9 @@ class ServiceModules {
         return retrofit.create(LoginService::class.java)
     }
 
+    @Provides
+    @Named("listService")
+    fun provideListService(retrofit: Retrofit):ListService{
+        return retrofit.create(ListService::class.java)
+    }
 }

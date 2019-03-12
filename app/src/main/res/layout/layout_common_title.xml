@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.a3xh1.basecore.custom.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        app:title_background="@color/white"
+        app:left_text_visible="true"
+        app:title_divider="@color/title_divider"
+        app:left_text_drawable="@drawable/ic_left"
+        app:title_text_color="@color/title_text_color"
+        app:title_text_size="@dimen/title_text_size"/>
+
+</layout>
