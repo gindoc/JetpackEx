@@ -72,11 +72,11 @@ class ListViewModel @Inject constructor(val repo: ListRepository) : BaseViewMode
             .subscribe()
     }
 
-    fun requestList(): Flowable<SimpleViewState<List<Medicine>?>> =
+    private fun requestList(): Flowable<SimpleViewState<List<Medicine>?>> =
         requestList(1)
             .startWith(SimpleViewState.loading())
 
-    fun requestList(page: Int): Flowable<SimpleViewState<List<Medicine>?>> =
+    private fun requestList(page: Int): Flowable<SimpleViewState<List<Medicine>?>> =
         repo.requestList(page)
             .compose(handleResponse())
             .map {

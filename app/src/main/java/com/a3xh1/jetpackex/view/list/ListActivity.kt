@@ -5,11 +5,11 @@ import androidx.lifecycle.Observer
 import com.a3xh1.basecore.common.adapter.BasePagingDataBindingAdapter
 import com.a3xh1.jetpackex.base.view.activity.BaseActivity
 import com.a3xh1.jetpackex.databinding.ActivityListBinding
-
-import com.a3xh1.jetpackex.R
 import com.a3xh1.jetpackex.databinding.ItemMedicineBinding
 import com.a3xh1.jetpackex.pojo.Medicine
 import com.a3xh1.jetpackex.utils.inflateTitle
+import com.a3xh1.jetpackex.R
+
 
 /**
  * Author: GIndoc on 2019/3/9.
@@ -29,6 +29,8 @@ class ListActivity : BaseActivity<ActivityListBinding>() {
             adapter.submitList(it)
         })
         binding.recyclerView.adapter = adapter
+
+
     }
 
     val adapter: BasePagingDataBindingAdapter<Medicine, ItemMedicineBinding> =
