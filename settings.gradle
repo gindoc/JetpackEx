@@ -1,1 +1,6 @@
 include ':app', ':mvvm_base'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir/*.parentFile*/,                         // 若做为原应用的子mudule，则为settingsDir
+        'my_flutter/.android/include_flutter.groovy'
+))
