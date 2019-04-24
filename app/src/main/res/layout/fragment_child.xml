@@ -4,8 +4,9 @@
 
 
     <TextView
+            android:id="@+id/text"
             android:layout_width="match_parent"
-            android:text="ChildFragment"
+            android:text="ChildFragment(toFlutterPage)"
             android:gravity="center"
             android:textColor="@color/colorPrimary"
             android:background="#80008577"

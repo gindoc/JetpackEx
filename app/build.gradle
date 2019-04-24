@@ -16,10 +16,33 @@ android {
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        release {
+            //.jks文件放在项目目录
+            storeFile file("/Users/chenwenhui/AndroidStudioProjects/3xh1/jyk.jks")
+            storePassword "jyk135"
+            keyAlias "jyk"
+            keyPassword "jyk135"
+        }
+        debug {
+            //.jks文件放在项目目录
+            storeFile file("/Users/chenwenhui/AndroidStudioProjects/3xh1/jyk.jks")
+            storePassword "jyk135"
+            keyAlias "jyk"
+            keyPassword "jyk135"
+        }
+    }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
+            //Zipalign优化
+//            zipAlignEnabled true
+            // 移除无用的resource文件
+//            shrinkResources true
+//            useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
     }
     compileOptions {
