@@ -18,6 +18,9 @@ import javax.inject.Inject
  */
 class App : BaseApplication(), HasActivityInjector {
 
+    companion object {
+        lateinit var instance:App
+    }
 
 
     @Inject
@@ -25,6 +28,7 @@ class App : BaseApplication(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
+        instance = this
         DaggerAppComponent.create().inject(this)
 
         initLogger(BuildConfig.DEBUG)

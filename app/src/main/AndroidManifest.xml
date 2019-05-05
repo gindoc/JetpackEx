@@ -31,6 +31,7 @@
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".view.snap_helper.SnapHelperActivity" />
+        <activity android:name=".view.arc_seek_bar.ArcSeekBarActivity" />
     </application>
 
 </manifest>

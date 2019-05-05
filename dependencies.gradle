@@ -76,7 +76,7 @@ ext {
             rxandroid               : [group: 'io.reactivex.rxjava2', name: 'rxandroid', version: versions.rxandroid],
             rxweaver                : [group: 'com.github.qingmei2.rxweaver', name: 'rxweaver', version: '0.3.0'],
 
-            glide                   : [group: 'com.github.bumptech.glide', name: 'glide', version: '4.9.0'],
+            glide                   : [group: 'com.github.bumptech.glide', name: 'glide', version: '3.7.0'],
 
             timber                  : [group: 'com.jakewharton.timber', name: 'timber', version: '4.7.1'],
 

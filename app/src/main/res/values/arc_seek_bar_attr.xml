@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcSeekBar">
+        <attr name="asb_start_angle" format="float"/>
+        <attr name="asb_sweep_angle" format="float"/>
+        <attr name="asb_arc_width" format="dimension"/>
+        <attr name="asb_arc_colors" format="reference" />
+        <attr name="asb_border_width" format="dimension"/>
+        <attr name="asb_border_color" format="reference|color"/>
+        <attr name="asb_thumb_radius" format="dimension"/>
+        <attr name="asb_thumb_shadow_color" format="color|reference"/>
+        <attr name="asb_thumb_shadow_radius" format="dimension"/>
+    </declare-styleable>
+</resources>

@@ -10,8 +10,8 @@ import javax.inject.Named
 
 /**
  * <sourceFolder url="file://$MODULE_DIR$/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r"
- *         isTestSource="false"
- *         generated="true" />
+          isTestSource="false"
+          generated="true" />
  */
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 

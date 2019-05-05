@@ -13,5 +13,16 @@ class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
+        print(D(10).code)
     }
+}
+
+
+abstract class Base {
+    val code = caculate()
+    abstract fun caculate(): Int
+}
+
+class D(private val x: Int) : Base() {
+    override fun caculate() = x
 }

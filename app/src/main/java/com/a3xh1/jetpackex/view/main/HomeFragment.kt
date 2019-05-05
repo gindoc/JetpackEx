@@ -7,6 +7,7 @@ import com.a3xh1.jetpackex.databinding.FragmentHomeBinding
 import javax.inject.Inject
 import javax.inject.Named
 import com.a3xh1.jetpackex.R
+import com.a3xh1.jetpackex.view.arc_seek_bar.ArcSeekBarActivity
 import com.a3xh1.jetpackex.view.snap_helper.SnapHelperActivity
 
 /**
@@ -45,6 +46,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         beginTransaction.commit()
 
         binding.tvSnapHelper.setOnClickListener { startActivity(Intent(context, SnapHelperActivity::class.java)) }
+
+        binding.tvArcSeekBar.setOnClickListener { startActivity(Intent(context, ArcSeekBarActivity::class.java)) }
     }
 
 

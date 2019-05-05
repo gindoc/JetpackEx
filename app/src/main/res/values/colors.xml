@@ -11,4 +11,13 @@
     <color name="text_gray_80">#808080</color>
     <color name="text_black_1a">#1A1A1A</color>
 
+    <array name="arc_colors_default">
+        <item>#1a2a6c</item>
+        <item>#b21f1f</item>
+        <item>#fdbb2d</item>
+    </array>
+    <array name="arc_colors">
+        <item>#37CF8F</item>
+        <item>#B8EF95</item>
+    </array>
 </resources>
