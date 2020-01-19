@@ -4,3 +4,4 @@ evaluate(new File(
         settingsDir/*.parentFile*/,                         // 若做为原应用的子mudule，则为settingsDir
         'my_flutter/.android/include_flutter.groovy'
 ))
+include ':my_flutter'

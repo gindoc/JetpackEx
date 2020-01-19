@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.a3xh1.jetpackex">
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.a3xh1.jetpackex">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
             android:name=".base.App"
@@ -16,20 +16,20 @@
             tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.auth.AuthActivity"/>
-        <activity android:name=".view.list.ListActivity"/>
-        <activity android:name=".view.flutter.FlutterActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
+        <activity android:name=".view.auth.AuthActivity" />
+        <activity android:name=".view.list.ListActivity" />
+        <activity
+                android:name="io.flutter.embedding.android.FlutterActivity"
+                android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:windowSoftInputMode="adjustResize" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
-        </activity>
         <activity android:name=".view.snap_helper.SnapHelperActivity" />
         <activity android:name=".view.arc_seek_bar.ArcSeekBarActivity" />
     </application>

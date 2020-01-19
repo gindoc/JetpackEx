@@ -1,11 +1,9 @@
 package com.a3xh1.jetpackex.view.main
 
-import android.content.Intent
-import android.view.View
+import com.a3xh1.jetpackex.R
 import com.a3xh1.jetpackex.base.view.fragment.BaseFragment
 import com.a3xh1.jetpackex.databinding.FragmentChildBinding
-import com.a3xh1.jetpackex.R
-import com.a3xh1.jetpackex.view.flutter.FlutterActivity
+import io.flutter.embedding.android.FlutterActivity
 import kotlinx.android.synthetic.main.fragment_child.*
 import javax.inject.Inject
 
@@ -19,7 +17,12 @@ class ChildFragment @Inject constructor() : BaseFragment<FragmentChildBinding>()
 
     override fun initView() =
         text.setOnClickListener {
-            startActivity(Intent(context, FlutterActivity::class.java))
+            context?.let { it1 ->
+                val intent = FlutterActivity.withNewEngine()
+                    .initialRoute("route1")
+                    .build(it1)
+                startActivity(intent)
+            }
         }
 
 }
