@@ -19,7 +19,7 @@ class ChildFragment @Inject constructor() : BaseFragment<FragmentChildBinding>()
         text.setOnClickListener {
             context?.let { it1 ->
                 val intent = FlutterActivity.withNewEngine()
-                    .initialRoute("http")
+                    .initialRoute("/")
                     .build(it1)
                 startActivity(intent)
             }

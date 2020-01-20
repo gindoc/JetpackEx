@@ -1,13 +1,17 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:my_flutter/pages/fluro/fluro_first_page.dart';
 
 import 'pages/HttpDemo.dart';
 
 void main() => runApp(_widgetForRoute(window.defaultRouteName));
 
 Widget _widgetForRoute(String route) {
+  print(route);
   switch (route) {
+    case '/':
+      return FluroDemo();
     case 'route1':
       return MyApp();
     case 'http':
